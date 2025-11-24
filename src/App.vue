@@ -1,12 +1,7 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import Hero from './components/Hero.vue'
 </script>
 
-<template>
-  <h1 class="text-2xl   text-violet-300">Hello</h1>
-  <HelloWorld  />
+<template class="relative min-h-screen w-screen overflow-x-hidden">
+  <Hero />
 </template>
-
-<style scoped>
-
-</style>
