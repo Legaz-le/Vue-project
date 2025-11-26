@@ -1,6 +1,6 @@
 <script setup>
 import { ref, computed, watch, nextTick, onMounted } from "vue";
-import Button from "./Button.vue";
+import Button from "./Reusable/Button.vue";
 import { Icon } from "@iconify/vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
