@@ -1,7 +1,8 @@
 <script setup>
-import Hero from "./components/Hero.vue";
-import About from "./components/About.vue";
-import Navbar from "./components/Navbar.vue";
+import Hero from "./components/Body/Hero.vue";
+import About from "./components/Body/About.vue";
+import Navbar from "./components/Body/Navbar.vue";
+import Features from "./components/Body/Features.vue";
 </script>
 
 <template>
@@ -9,5 +10,6 @@ import Navbar from "./components/Navbar.vue";
     <Navbar />
     <Hero />
     <About />
+    <Features />
   </div>
 </template>

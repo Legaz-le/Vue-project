@@ -1,6 +1,6 @@
 <script setup>
 import { ref, watch } from "vue";
-import Button from "./Reusable/Button.vue";
+import Button from "../Reusable/Button.vue";
 import { Icon } from "@iconify/vue";
 import { useWindowScroll } from "@vueuse/core";
 import gsap from "gsap";

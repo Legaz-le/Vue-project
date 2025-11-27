@@ -2,7 +2,7 @@
 import { watch, onMounted } from "vue";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import AnimatedTitle from "./Reusable/AnimatedTitle.vue";
+import AnimatedTitle from "../Reusable/AnimatedTitle.vue";
 
 gsap.registerPlugin(ScrollTrigger);
 
