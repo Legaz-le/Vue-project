@@ -2,12 +2,41 @@
 import { ref, watch } from "vue";
 import Button from "./Reusable/Button.vue";
 import { Icon } from "@iconify/vue";
+import { useWindowScroll } from "@vueuse/core";
+import gsap from "gsap";
 
 const navContainerRef = ref(null);
 const audioElementRef = ref(null);
 const loading = ref(false);
 const indicatorActive = ref(false);
+const lastScroll = ref(0);
+const visibleScroll = ref(true);
 const navItems = ["Nexus", "Vault", "Prologue", "About", "Contact"];
+
+const { y: currentScrollY } = useWindowScroll();
+
+watch(currentScrollY, (value) => {
+  if ((value === 0)) {
+    visibleScroll.value = true;
+    navContainerRef.value.classList.remove("floating-nav");
+  } else if (value > lastScroll.value) {
+    visibleScroll.value = false;
+    navContainerRef.value.classList.add("floating-nav");
+  } else if (value < lastScroll.value)  {
+    visibleScroll.value = true;
+    navContainerRef.value.classList.add("floating-nav");
+  }
+  
+  lastScroll.value = value;
+});
+
+watch(visibleScroll, (isVisible) => {
+    gsap.to(navContainerRef.value, {
+        y:isVisible ? 0 : -100,
+        opacity: isVisible ? 1 : 0,
+        duration: 0.2,
+    })
+})
 
 const toggleAudioIndicator = () => {
   loading.value = !loading.value;
