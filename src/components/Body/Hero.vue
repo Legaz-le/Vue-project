@@ -137,6 +137,7 @@ onMounted(() => {
       ></video>
       <video
         :src="videoSrc(currentIndex)"
+        autoPlay
         loop
         muted
         class="absolute left-0 top-0 size-full object-cover object-center"

@@ -4,6 +4,8 @@ import About from "./components/Body/About.vue";
 import Navbar from "./components/Body/Navbar.vue";
 import Features from "./components/Body/Features.vue";
 import Story from "./components/Body/Story.vue";
+import Contact from "./components/Body/Contact.vue"
+import Footer from "./components/Body/Footer.vue"
 </script>
 
 <template>
@@ -13,5 +15,7 @@ import Story from "./components/Body/Story.vue";
     <About />
     <Features />
     <Story />
+    <Contact />
+    <Footer />
   </div>
 </template>
