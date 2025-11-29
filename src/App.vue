@@ -3,6 +3,7 @@ import Hero from "./components/Body/Hero.vue";
 import About from "./components/Body/About.vue";
 import Navbar from "./components/Body/Navbar.vue";
 import Features from "./components/Body/Features.vue";
+import Story from "./components/Body/Story.vue";
 </script>
 
 <template>
@@ -11,5 +12,6 @@ import Features from "./components/Body/Features.vue";
     <Hero />
     <About />
     <Features />
+    <Story />
   </div>
 </template>
